@@ -1,0 +1,24 @@
+#me-img {
+	width:  150px;
+	height:  150px;
+	margin: 10px 15px 10px 0px;
+}
+
+.navbar-brand > a {
+	text-decoration: none;
+	color:  black;
+}
+
+.navbar-brand {
+	padding: 25px;
+}
+
+body {
+	background-color: #2F4F4F;
+}
+
+#header-nav {
+	background-color: #008080;
+	border-radius: 0;
+	border:  0;
+}
