@@ -37,10 +37,8 @@
 					</div>
 
 					<!-- Menu Button -->
-					<!-- 
-						Data-Toggle - Bootstrap calls the class collapse which toggle the visiblity. 
-						Data-Target/href - identify which to element to call to.
-					-->
+					<!-- Data-Toggle - Bootstrap calls the class collapse which toggle the visiblity. 
+						Data-Target/href - identify which to element to call to. -->
 				    <button onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"  class="menuBtn navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 				      <svg width="50" height="50" viewBox="0 0 100 100">
 				        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
@@ -92,8 +90,21 @@
 		</a>
 	</div>
 
-	<!-- Testing to commit -->
-
+	<!-- Tiles -->
+	<div class="container"> 
+		<div id="tiles" class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12" align="center">
+				<a href="../documents/Resume.pdf" target="_blank">
+					<div id="resume-tile"><span>Resume PDF</span></div>
+				</a>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12" align="center">
+				<a href="https://www.nwmissouri.edu/" target="_blank">
+					<div id="college-tile"><span>College</span></div>
+				</a>
+			</div>
+		</div>
+	</div>
 	<!-- JQuery JavaScript (Need it before Bootstrap)-->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<!-- Bootstrap JavaScript -->

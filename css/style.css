@@ -1,3 +1,4 @@
+
 body { background-color: #2F4F4F; }
 
 /* BEGINNING HEADER STYLE */
@@ -24,7 +25,7 @@ body { background-color: #2F4F4F; }
   margin-bottom: 0;
   line-height: .75;
 }
-.navbar-brand a:hover, .navbar-brand a:focus { /* Link */ text-decoration: none; }
+.navbar-brand a:hover, .navbar-brand a:focus { /* Link */ text-decoration: none;}
 .navbar-brand p { /* Laptop Design */
   color: #000;
   text-transform: uppercase;
@@ -38,14 +39,19 @@ body { background-color: #2F4F4F; }
 
 /* Navigation List Design */
 #nav-list { margin-top: 10px; }
-#nav-list a:hover { background: #E7E7E7; }
+#nav-list a:hover { 
+	background: #E7E7E7; 
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
 #nav-list a {
   color: black;
   text-align: center;
   font-size: 1.0em;
 }
 
-#email-btn {box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
+#email-btn {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	margin-bottom: 10px;
+}
 #email-btn > a { /* Email Me */
 	font-size: 1.5em;
     display: block;
@@ -57,8 +63,46 @@ body { background-color: #2F4F4F; }
 }
 /* END HEADER STYLE */
 
-/* BEGINNING IFRAME RESUME*/
-.c26 {margin: 0px 200px;}
+
+
+/* START HOME PAGE */
+.container #tiles #resume-tile, .container #tiles #college-tile  {
+	height: 400px;
+	margin:15px 0px 15px 0px;
+	position: relative;
+	overflow: hidden;
+}
+
+.container #tiles #resume-tile:hover, .container #tiles #college-tile:hover  {
+	box-shadow: 0 0 50px black;
+}
+
+
+#resume-tile {
+	background:  url('../images/resume.jpg') no-repeat;
+  	background-position: center;
+
+}
+
+#college-tile {
+	background: url('../images/college.jpg') no-repeat;
+  	background-position: center;
+}
+
+#resume-tile span, #college-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+/* END HOME PAGE */
+
 
 /********** START LARGER DEVICE **********/
 @media (min-width: 1200px) {
@@ -66,9 +110,13 @@ body { background-color: #2F4F4F; }
 }
 /********** END LARGER DEVICE   **********/
 
+
+
+
 /********** START MEDIUM DEVICE **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
+  
   #me-img {
     background: url('../images/restaurant-logo_medium.png') no-repeat;
     width: 150px;
@@ -78,16 +126,25 @@ body { background-color: #2F4F4F; }
   .navbar-brand h1 { /* My Name */ font-size: 1.25em }
   .navbar-brand p span { /* Position */ font-size: 0.75em; }
   #nav-list a {font-size: 0.90em;}
-  /* End Header */
+  
+  /* Header */
 }
 /********** END MEDIUM DEVICE   **********/
 
 
+
+
 /********** START SMALL DEVICE **********/
 @media (min-width: 768px) and (max-width: 991px) {
+	/* Header */
+	
 	#collapsable-nav #nav-list { float:left!important; }
+	
+	/* Header */
 }
 /********** END SMALL DEVICE   **********/
+
+
 
 
 /********** STAR EXTRA SMALL DEVICE **********/
@@ -121,6 +178,16 @@ body { background-color: #2F4F4F; }
     background-color: #008080;
     color: black;
 	}
+/* Header */
+
+/* Home Page */
+.container #tiles #resume-tile, .container #tiles #college-tile  {
+	height: 300px;
+	width: 80%;
+}
+
+#tiles {margin-top: 20px;}
+/* Home Page */
 }
 
 /********** END EXTRA SMALL DEVICE   **********/
