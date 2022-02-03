@@ -57,6 +57,9 @@ body { background-color: #2F4F4F; }
 }
 /* END HEADER STYLE */
 
+/* BEGINNING IFRAME RESUME*/
+.c26 {margin: 0px 200px;}
+
 /********** START LARGER DEVICE **********/
 @media (min-width: 1200px) {
 	/* Still the same (just in case) */
