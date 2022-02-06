@@ -2,6 +2,7 @@
 const mediaQuery1 = window.matchMedia('(max-width: 991px)');
 // Create a condition that targets viewports at least 992px wide
 const mediaQuery2 = window.matchMedia('(min-width: 992px)');
+
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
@@ -25,4 +26,3 @@ mediaQuery2.addListener(handleTabletChange);
 
 // Initial check
 handleTabletChange(mediaQuery1);
-handleTabletChange(mediaQuery2);
