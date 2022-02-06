@@ -15,7 +15,7 @@ body { background-color: #2F4F4F; }
 	margin: 10px 15px 10px 0px;
 }
 
-.navbar-brand { padding-top: 25px; }
+.navbar-brand { padding-top: 25px;}
 .navbar-brand h1 { /* My Name */
   font-size: 1.5em;
   text-transform: uppercase;
@@ -24,30 +24,33 @@ body { background-color: #2F4F4F; }
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
+  color: white;
 }
 .navbar-brand a:hover, .navbar-brand a:focus { /* Link */ text-decoration: none;}
 .navbar-brand p { /* Laptop Design */
-  color: #000;
+  color: white;
   text-transform: uppercase;
   margin-top: 15px;
 }
 .navbar-brand p span { /* Position */ vertical-align: top; }
 .navbar-brand > a { /* Navigation Icons */
 	text-decoration: none;
-	color:  black;
+	color:  white;
 }
 
 /* Navigation List Design */
 #nav-list { margin-top: 10px; }
 #nav-list a:hover { 
-	background: #E7E7E7; 
+	background: black; 
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
 #nav-list a {
-  color: black;
+  color: white;
   text-align: center;
   font-size: 1.0em;
 }
+#collapsable-nav #nav-list .selected {background-color: black;}
 
+/* Email me Design*/
 #email-btn {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	margin-bottom: 10px;
@@ -66,22 +69,20 @@ body { background-color: #2F4F4F; }
 
 
 /* START HOME PAGE */
-.container #tiles #resume-tile, .container #tiles #college-tile  {
+.container #tiles #resume-tile, .container #tiles #college-tile, .container #tiles #work-tile, .container #tiles #map-tile  {
 	height: 400px;
 	margin:15px 0px 15px 0px;
 	position: relative;
 	overflow: hidden;
 }
 
-.container #tiles #resume-tile:hover, .container #tiles #college-tile:hover  {
+#resume-tile:hover, #college-tile:hover, #work-tile:hover, #map-tile:hover  {
 	box-shadow: 0 0 50px black;
 }
 
-
 #resume-tile {
 	background:  url('../images/resume.jpg') no-repeat;
-  	background-position: center;
-
+  background-position: center;
 }
 
 #college-tile {
@@ -89,7 +90,17 @@ body { background-color: #2F4F4F; }
   	background-position: center;
 }
 
-#resume-tile span, #college-tile span {
+#work-tile {
+	background: url('../images/Work.jpg') no-repeat;
+  background-position: center;
+}
+
+#map-tile {
+	background-position: center;
+}
+
+
+#resume-tile span, #college-tile span, #work-tile span, #-tile span {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -103,10 +114,45 @@ body { background-color: #2F4F4F; }
 }
 /* END HOME PAGE */
 
+/* About Me PAGE */
+.about-me-item-name {
+  font-size: 1.5em;
+  text-align: right;
+  margin-top: -15px;
+  margin-right: 0px;
+  font-weight: bold;
+  color: black;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  text-align: center;
+}
+
+.about-me-item-photo {
+  position: relative;
+  border: 1px solid white; 
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+
+h3.about-me-item-title {
+  margin: 0 0 10px;
+}
+
+
+#main-content {color: white;}
 
 /********** START LARGER DEVICE **********/
 @media (min-width: 1200px) {
-	/* Still the same (just in case) */
+	 /* About Me Page */
+  .about-me-item-pic{height:  400px;}
+  /* About Me Page */
 }
 /********** END LARGER DEVICE   **********/
 
@@ -128,6 +174,10 @@ body { background-color: #2F4F4F; }
   #nav-list a {font-size: 0.90em;}
   
   /* Header */
+
+  /* About Me Page */
+  .about-me-item-pic {height:  310px;}
+  /* About Me Page */
 }
 /********** END MEDIUM DEVICE   **********/
 
@@ -141,6 +191,13 @@ body { background-color: #2F4F4F; }
 	#collapsable-nav #nav-list { float:left!important; }
 	
 	/* Header */
+
+  /* About Me Page */
+  
+  .about-me-item-pic {height:  480px;}
+  .about-me-item-photo {margin-right: 0px}
+  
+  /* About Me Page */
 }
 /********** END SMALL DEVICE   **********/
 
@@ -178,17 +235,25 @@ body { background-color: #2F4F4F; }
     background-color: #008080;
     color: black;
 	}
-/* Header */
+  /* Header */
 
-/* Home Page */
-.container #tiles #resume-tile, .container #tiles #college-tile  {
-	height: 300px;
-	width: 80%;
+  /* Home Page */
+  .container #tiles #resume-tile, .container #tiles #college-tile,.container #tiles #work-tile, ,.container #tiles #map-tile    {
+  	height: 300px;
+  	width: 80%;
+  }
+
+  #tiles {margin-top: 20px;}
+  /* Home Page */
+
+  /* About Me Page */
+  
+  .about-me-item-pic {height:  480px;}
+  .about-me-item-photo {margin-right: 0px}
+  
+  /* About Me Page */
 }
 
-#tiles {margin-top: 20px;}
-/* Home Page */
-}
 
 /********** END EXTRA SMALL DEVICE   **********/
 
