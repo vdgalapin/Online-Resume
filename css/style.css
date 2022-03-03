@@ -114,8 +114,8 @@ body { background-color: #2F4F4F; }
 }
 /* END HOME PAGE */
 
-/* About Me PAGE */
-.about-me-item-name {
+/* Work Experience and About Me PAGE */
+.about-me-item-name, .work-experience-item-name  {
   font-size: 1.5em;
   text-align: right;
   margin-top: -15px;
@@ -130,7 +130,7 @@ body { background-color: #2F4F4F; }
   text-align: center;
 }
 
-.about-me-item-photo {
+.about-me-item-photo, .work-experience-item-photo {
   position: relative;
   border: 1px solid white; 
   overflow: hidden;
@@ -141,8 +141,12 @@ body { background-color: #2F4F4F; }
 }
 
 
-h3.about-me-item-title {
+h3.about-me-item-title, h3.work-experience-item-title {
   margin: 0 0 10px;
+}
+
+.work-experience-item-tile  .work-experience-item-description p {
+  font-size: 16px;
 }
 
 /* About Me */

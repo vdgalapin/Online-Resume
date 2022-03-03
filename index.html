@@ -39,7 +39,7 @@
 					<!-- Menu Button -->
 					<!-- Data-Toggle - Bootstrap calls the class collapse which toggle the visiblity. 
 						Data-Target/href - identify which to element to call to. -->
-				    <button onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"  class="menuBtn navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+				    <button id="navbarToggle" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu"  class="menuBtn navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" type="button">
 				      <svg width="50" height="50" viewBox="0 0 100 100">
 				        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
 				        <path class="line line2" d="M 20,50 H 80" />
@@ -52,8 +52,15 @@
 				<!-- Menu Options in Dashboard -->
 				<div id="collapsable-nav" class="collapse navbar-collapse">
            			<ul id="nav-list" class="nav navbar-nav navbar-right">
-						<li>
-							<a href="AboutMe.html">
+           				<li id = 'navHomeButton' class="visible-xs selected">
+           					<a href="index.html">
+           						<span class="glyphicon glyphicon-home"></span>
+
+           						Home	
+           					</a>
+           				</li>
+						<li id = 'navAboutMe'>
+							<a href="#" onclick="$dc.loadAboutMe(); switchDivs();">
 								<span class="glyphicon glyphicon-user"></span>				
 								About Me
 							</a>
@@ -92,30 +99,7 @@
 
 	<!-- Tiles -->
 	<div id="main-content" class="container"> 
-		<div id="tiles" class="row">
-			<div class="col-md-4 col-sm-6 col-xs-12" align="center">
-				<a href="documents/Resume.pdf" target="_blank" type="application/pdf">
-					<div id="resume-tile"><span>Resume</span></div>
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-6 col-xs-12" align="center">
-				<a href="https://www.nwmissouri.edu/" target="_blank">
-					<div id="college-tile"><span>Education</span></div>
-				</a>
-			</div>
-			<div class="col-md-4 col-sm-12 col-xs-12" align="center">
-				<a href="https://kawasakimaryville.com/" target="_blank">
-					<div id="work-tile"><span>Work</span></div>
-				</a>
-			</div>
-			<div class="col-xs-12" align="center">
-				<a href="https://goo.gl/maps/g4Cct2kbbSo7AVL76" target="_blank">
-				<div id="map-tile">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.3375438604953!2d-94.8791485485281!3d40.31266567927609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87eac56e46023615%3A0x2b6b8f7fc8c977c3!2sKawasaki%20Motors%20Manufacturing%20Corporation%20USA!5e0!3m2!1sen!2sus!4v1643852925224!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-					<span>Work Map</span></div>
-				</a>
-			</div>
-		</div> <!-- #tiles -->
+		
 	</div> <!-- #Main-Content .container -->
 
 
@@ -124,7 +108,11 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<!-- Bootstrap JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- Ajax -->
+	<script src="js/ajax-utils.js"></script>
 	<!-- My Scripts -->
+	<script src="js/MediaListener.js"></script>
 	<script src="js/script.js"></script>
+	
 </body>
 </html>
