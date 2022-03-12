@@ -25,8 +25,8 @@ app.get('/', function(req, res) {
 	// Render index page
 	res.render('pages/index', {
 		// EJS variable and server-side variable
-		Dad: Dad
-		Mom: Mom
+		Dad: Dad,
+		Mom: Mom,
 		Kids:  kids
 	});
 });
