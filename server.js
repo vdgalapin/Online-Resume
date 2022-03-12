@@ -27,6 +27,6 @@ app.get('/', function(req, res) {
 		// EJS variable and server-side variable
 		Dad: Dad,
 		Mom: Mom,
-		Kids:  kids
+		Kids:  Kids
 	});
 });
