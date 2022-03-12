@@ -8,17 +8,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vyron Galapin</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="/../../webpage/css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="/../../public/css/bootstrap.min.css" >
 	<!-- My Designs -->
-	<link rel="stylesheet" type="text/css" href="/../../webpage/css/style.css" >
-	<link rel="stylesheet" type="text/css" href="/../../webpage/css/MenuButton.css" >
+	<link rel="stylesheet" type="text/css" href="/../../public/css/style.css" >
+	<link rel="stylesheet" type="text/css" href="/../../public/css/MenuButton.css" >
 	<!-- Font -->
 	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<% include('../partials/header') %>
+	<!-- Header -->
+	<header>
+		<% include('../partials/header') %>
+	</header>
 	
-	<% include('../partials/email') %>
+	
+	<!-- Email Button Only show in extra small devices -->
+	<div id = "email-btn" class="visible-xs"> 
+		<% include('../partials/email') %>
+	</div>
+	
 
 	<!-- Tiles -->
 	<div id="main-content" class="container"> 
@@ -36,7 +44,7 @@
 					<div class="col-md-6">
 						<div  class="work-experience-item-photo">
 							<div class="work-experience-item-name">Kawasaki Motors Manufacturer</div>
-							<img class="work-experience-item-pic" src="../../webpage/images/kawasaki.jpg" />
+							<img class="work-experience-item-pic" src="../../public/images/kawasaki.jpg" />
 						</div>
 					</div>
 					<div class="work-experience-item-description col-md-6">
@@ -64,7 +72,7 @@
 					<div class="col-md-6 DivTwo">
 						<div  class="work-experience-item-photo">
 							<div class="work-experience-item-name">Taco Bell</div>
-							<img class="work-experience-item-pic" src="../../webpage/images/tacobell.jpg" />
+							<img class="work-experience-item-pic" src="../../public/images/tacobell.jpg" />
 						</div>
 					</div>
 				
@@ -77,7 +85,7 @@
 					<div class="col-md-6">
 						<div  class="work-experience-item-photo">
 							<div class="work-experience-item-name">St. Gregory Barbarigo School</div>
-							<img class="work-experience-item-pic" src="../../webpage/images/stgregory.jpg" />
+							<img class="work-experience-item-pic" src="../../public/images/stgregory.jpg" />
 						</div>
 					</div>
 					<div class="work-experience-item-description col-md-6">
@@ -96,13 +104,13 @@
 
 
 	<!-- JQuery JavaScript (Need it before Bootstrap)-->
-	<script src="../../webpage/js/jquery-2.1.4.min.js"></script>
+	<script src="../../public/js/jquery-2.1.4.min.js"></script>
 	<!-- Bootstrap JavaScript -->
-	<script src="../../webpage/js/bootstrap.min.js"></script>
+	<script src="../../public/js/bootstrap.min.js"></script>
 	<!-- Ajax -->
-	<script src="../../webpage/js/ajax-utils.js"></script>
+	<script src="../../public/js/ajax-utils.js"></script>
 	<!-- My Scripts -->
-	<script src="../../webpage/js/MediaListener.js"></script>
-	<script src="../../webpage/js/script.js"></script>
+	<script src="../../public/js/MediaListener.js"></script>
+	<script src="../../public/js/script.js"></script>
 </body>
 </html>

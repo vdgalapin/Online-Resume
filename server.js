@@ -8,7 +8,7 @@ const ejs = require('ejs');
 var app = express();
 
 // Render static files
-app.use(express.static('webpage'));
+app.use(express.static('public'));
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -17,6 +17,13 @@ app.set('view engine', 'ejs');
 app.listen(8080);
 
 // *** GET Routes - display pages ***
+// Specifies the URL of the website the code will activate on
+// req stands for request
+// res stands for response
+
+// Get and Post
+// Get routes display pages
+// Post routes upload data from the front-end to the server
 app.get('/', function(req, res) {
 	var Dad = "Rosvic";
 	var Mom = "Julifer";
@@ -27,6 +34,6 @@ app.get('/', function(req, res) {
 		// EJS variable and server-side variable
 		Dad: Dad,
 		Mom: Mom,
-		Kids:  Kids
+		Kids: Kids
 	});
 });
