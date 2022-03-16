@@ -1,17 +1,24 @@
 // Load Node modules
 var express = require('express');
 
+const bodyParser = require('body-parser');
+const mongoos = require('mongoose');
+
 // Add the EJS Node Moduleto the server
 const ejs = require('ejs');
 
 // Initialise Express
 var app = express();
 
-// Render static files
-app.use(express.static('public'));
+
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({extended: true}));
+// Render static files
+app.use(express.static('public'));
+
 
 // Port website will run on
 app.listen(8080);
@@ -25,15 +32,6 @@ app.listen(8080);
 // Get routes display pages
 // Post routes upload data from the front-end to the server
 app.get('/', function(req, res) {
-	var Dad = "Rosvic";
-	var Mom = "Julifer";
-	var Kids = ["Vyron", "Jag", "Jewl", "Vince"];
-
 	// Render index page
-	res.render('pages/index', {
-		// EJS variable and server-side variable
-		Dad: Dad,
-		Mom: Mom,
-		Kids: Kids
-	});
+	res.render('pages/index');
 });

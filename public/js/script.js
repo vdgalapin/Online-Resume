@@ -22,7 +22,7 @@ $(function() {
 
 
 
-/*
+
 
 // This is a closure, its a design pattern commonly used in JavaScript
 // This calling anonymous function straight away
@@ -31,12 +31,16 @@ $(function() {
 	var dc = {};
 
 	// Home Page Snippet
-	//var homeHTML = "../../views/partial/home-snippet.html";
-	var homeHTML = 'snippets/home-snippet.html';
-	// About me Snippte
-	var aboutMeHTML = '../../views/partial/about-me-snippet.html'
+	var homeHTML = "snippets/home-snippet.html";
 
+	// About me Snippet
+	var aboutMeHTML = 'snippets/about-me-snippet.html'
 
+	// Personal Project Snippet
+	var personalProjectHTML = 'snippets/personal-project-snippet.html'
+
+	// Work Experience Snippet
+	var workExperienceHTML = 'snippets/work-experience-snippet.html'
 
 	// Convenience function for inserting innerHTML for 'select'
 	// Usually used to insert to the #main-content
@@ -52,21 +56,53 @@ $(function() {
 	// This is the loading page
 	var showLoading = function(selector) {
 		var html = "<div class='text-center'>";
-		html += "<img src='../../webpage/images/ajax-loader.gif'></div>";
+		html += "<img src='images/ajax-loader.gif'></div>";
 		insertHtml(selector, html);
 	}
 
 
+	// Remove the selected to all classes
+	var removeSelected = function() {
+		// Remove 'selected' to every possible button 
 
-	// Rename the class 'selected' from home and switch to About Me Button
-	var switchAboutMeToSelected = function() {
-		// Remove 'selected' from home button
 		var classes = document.querySelector("#navHomeButton").className;
 		classes = classes.replace(new RegExp("selected", "g"), "");
 		document.querySelector("#navHomeButton").className = classes;
 
-		// Add 'selected' to menu button if not already there
+		classes = document.querySelector("#navWorkExperience").className;
+		classes = classes.replace(new RegExp("selected", "g"), "");
+		document.querySelector("#navWorkExperience").className = classes;
+
+		classes = document.querySelector("#navPersonalProject").className;
+		classes = classes.replace(new RegExp("selected", "g"), "");
+		document.querySelector("#navPersonalProject").className = classes;
+
 		classes = document.querySelector("#navAboutMe").className;
+		classes = classes.replace(new RegExp("selected", "g"), "");
+		document.querySelector("#navAboutMe").className = classes;		
+	}
+
+	// Rename the class 'selected' from home and switch to About Me Button
+	var switchHomeToSelected = function() {
+		// Remove 'selected' from home button
+		removeSelected();
+
+		// Add 'selected' to menu button if not already there
+		var classes = document.querySelector("#navHomeButton").className;
+		if (classes.indexOf("selected") == -1) {
+			classes += "selected";
+			document.querySelector("#navHomeButton").className = classes;
+		}
+
+	};
+
+	// Rename the class 'selected' from home and switch to About Me Button
+	var switchAboutMeToSelected = function() {
+		// Remove 'selected' from home button
+		removeSelected();
+
+		// Add 'selected' to menu button if not already there
+		var classes = document.querySelector("#navAboutMe").className;
 		if (classes.indexOf("selected") == -1) {
 			classes += "selected";
 			document.querySelector("#navAboutMe").className = classes;
@@ -74,6 +110,33 @@ $(function() {
 
 	};
 
+	// Rename the class 'selected' from home and switch to About Me Button
+	var switchWorkExperienceToSelected = function() {
+		// Remove 'selected' from home button
+		removeSelected();
+
+		// Add 'selected' to menu button if not already there
+		var classes = document.querySelector("#navWorkExperience").className;
+		if (classes.indexOf("selected") == -1) {
+			classes += "selected";
+			document.querySelector("#navWorkExperience").className = classes;
+		}
+
+	};
+
+		// Rename the class 'selected' from home and switch to About Me Button
+	var switchPersonalProjectedToSelected = function() {
+		// Remove 'selected' from home button
+		removeSelected();
+
+		// Add 'selected' to menu button if not already there
+		var classes = document.querySelector("#navPersonalProject").className;
+		if (classes.indexOf("selected") == -1) {
+			classes += "selected";
+			document.querySelector("#navPersonalProject").className = classes;
+		}
+
+	};
 
 
 	// Om page load (before images or css)
@@ -87,11 +150,28 @@ $(function() {
 		$ajaxUtils.sendGetRequest(homeHTML, 
 								  function(responseText) {
 								  	document.querySelector("#main-content").innerHTML = responseText;
+								  	switchHomeToSelected();
 								  },
 								  false);
-	});
+	}); 
+
+	// loading the About Me page
+	dc.loadHome = function () {
 
 
+		// the loading css
+		showLoading("#main-content");
+
+
+		// Gets the About me page
+		$ajaxUtils.sendGetRequest(homeHTML,
+						 		  function(responseText) {
+								  	document.querySelector("#main-content").innerHTML = responseText;
+								  	switchHomeToSelected();
+								  },
+								  false);
+		
+	}
 
 	// loading the About Me page
 	dc.loadAboutMe = function () {
@@ -111,6 +191,44 @@ $(function() {
 		
 	}
 
+
+	// loading the personal Project Page
+	dc.loadPersonalProject = function () {
+
+
+		// the loading css
+		showLoading("#main-content");
+
+
+		// Gets the About me page
+		$ajaxUtils.sendGetRequest(personalProjectHTML,
+						 		  function(responseText) {
+								  	document.querySelector("#main-content").innerHTML = responseText;
+								  	switchPersonalProjectedToSelected();
+								  },
+								  false);
+		
+	}
+
+
+	// loading the Work Experience Page
+	dc.loadWorkExperience = function () {
+
+
+		// the loading css
+		showLoading("#main-content");
+
+
+		// Gets the About me page
+		$ajaxUtils.sendGetRequest(workExperienceHTML,
+						 		  function(responseText) {
+								  	document.querySelector("#main-content").innerHTML = responseText;
+								  	switchWorkExperienceToSelected();
+								  },
+								  false);
+		
+	}
+
 	global.$dc = dc;
 
-})(window); */
+})(window);
