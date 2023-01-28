@@ -35,3 +35,8 @@ app.get('/', function(req, res) {
 	// Render index page
 	res.render('pages/index');
 });
+
+app.get('/AboutMe', function(req, res) {
+	// Render index page
+	res.render('pages/AboutMe');
+});
