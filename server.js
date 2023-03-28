@@ -21,7 +21,7 @@ app.use(express.static('public'));
 
 
 // Port website will run on
-app.listen(8080);
+app.listen(process.env.PORT || 5000);
 
 // *** GET Routes - display pages ***
 // Specifies the URL of the website the code will activate on
