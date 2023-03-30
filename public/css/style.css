@@ -169,7 +169,6 @@ h3.about-me-item-title, h3.work-experience-item-title {
   /* Header */
   
   #me-img {
-    background: url('../images/restaurant-logo_medium.png') no-repeat;
     width: 150px;
     height: 150px;
     margin: 5px 10px 5px 0;
@@ -243,7 +242,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
   /* Header */
 
   /* Home Page */
-  .container #tiles #resume-tile, .container #tiles #college-tile,.container #tiles #work-tile, ,.container #tiles #map-tile    {
+  .container #tiles #resume-tile, .container #tiles #college-tile,.container #tiles #work-tile, .container #tiles #map-tile    {
   	height: 300px;
   	width: 80%;
   }
