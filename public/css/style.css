@@ -156,7 +156,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
 /********** START LARGER DEVICE **********/
 @media (min-width: 1200px) {
 	 /* About Me Page */
-  .about-me-item-pic{height:  400px;}
+  .about-me-item-picm .work-experience-item-pic{height:  480px;}
   /* About Me Page */
 }
 /********** END LARGER DEVICE   **********/
@@ -180,7 +180,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
   /* Header */
 
   /* About Me Page */
-  .about-me-item-pic {height:  250px;}
+  .about-me-item-pic, .work-experience-item-pic {height:  450px;}
   /* About Me Page */
 }
 /********** END MEDIUM DEVICE   **********/
@@ -198,7 +198,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
 
   /* About Me Page */
   
-  .about-me-item-pic {height:  480px;}
+  .about-me-item-pic, .work-experience-item-pic {height:  380px;}
   .about-me-item-photo {margin-right: 0px}
   
   /* About Me Page */
@@ -252,7 +252,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
 
   /* About Me Page */
   
-  .about-me-item-pic {height:  480px;}
+  .about-me-item-pic, .work-experience-item-pic {height:  350px;}
   .about-me-item-photo {margin-right: 0px}
   
   /* About Me Page */
