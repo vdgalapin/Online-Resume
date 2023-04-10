@@ -156,7 +156,7 @@ h3.about-me-item-title, h3.work-experience-item-title {
 /********** START LARGER DEVICE **********/
 @media (min-width: 1200px) {
 	 /* About Me Page */
-  .about-me-item-picm .work-experience-item-pic{height:  450px;}
+  .about-me-item-pic, .work-experience-item-pic{height:  450px;}
   /* About Me Page */
 }
 /********** END LARGER DEVICE   **********/
